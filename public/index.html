@@ -1,17 +1,82 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Лига Роботов</title>
+    
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+        <h1>Проверка доступности региона/города</h1>
+        <main>
+      
+          <section class="wrapper">
+            <form class="form-search">
+              <div class="wrapper__search">
+
+                <div class="input" style="display: block;">
+                  <label>ФИО
+                    <input type="text" class="input__name" onblur="if (validFIO == false) this.style.background = 'red';" required>
+                  </label>
+                  <ul class="dropdown dropdown__name">    
+                  </ul>
+                </div>
+
+                <div class="input" style="display: block;">
+                  <label>Контактный телефон
+                    <input type="text" class="input__number" required>
+                  </label>
+                  <ul class="dropdown dropdown__number">    
+                  </ul>
+                </div>
+
+                <div class="input" style="display: block;">
+                  <label>E-mail
+                    <input type="text" class="input__e-mail" required>
+                  </label>
+                  <ul class="dropdown dropdown__e-mail">    
+                  </ul>
+                </div>
+
+                <div class="input" style="display: block;">
+                  <label>Страна
+                    <input type="text" class="input__country" required>
+                  </label>
+                  <ul class="dropdown dropdown__country">    
+                  </ul>
+                </div>
+      
+                <div class="input">
+                  <label>Регион
+                    <input type="text" class="input__region" required>
+                  </label>
+                  <ul class="dropdown dropdown__region">
+      
+                  </ul>
+                </div>
+      
+                <div class="input">
+                  <label>Город
+                    <input type="text" class="input__city" required>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="line"></div>
+      
+              <div class="wrapper__button">
+                <button type="submit" class="button">
+                  <span class="button">Отправить заявку!</span>
+                </button>
+              </div>
+            </form>
+          </section>
+          <section class="wrapper">
+        </section> 
+        <script src="script.js"></script>
   </body>
 </html>
